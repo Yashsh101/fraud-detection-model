@@ -4,7 +4,7 @@ Early ML project upgraded into a reproducible fraud-detection scaffold with trai
 
 ## Live Demo
 
-- Demo URL: `Not deployed yet`
+- Demo: Demo coming soon
 - Local API docs: `http://localhost:8000/docs`
 
 ## Problem

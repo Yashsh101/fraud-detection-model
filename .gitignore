@@ -10,3 +10,16 @@ artifacts/
 data/raw/
 data/processed/
 *.log
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+credentials.json
+service-account*.json
+.DS_Store
+node_modules/
+dist/
+build/
+.vercel/
+.railway/

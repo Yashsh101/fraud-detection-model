@@ -72,7 +72,7 @@ fraud-detection-model/
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env
+# Optional: export MODEL_PATH, REPORT_PATH, FRAUD_THRESHOLD, or RANDOM_STATE before running commands.
 ```
 
 ## Environment Variables
@@ -87,13 +87,13 @@ cp .env.example .env
 ## Train
 
 ```bash
-python scripts/train.py
+python -m scripts.train
 ```
 
 ## Evaluate
 
 ```bash
-python scripts/evaluate.py
+python -m scripts.evaluate
 ```
 
 ## Run API
@@ -124,9 +124,9 @@ For fraud detection, recall is important because missed fraud is costly, but pre
 
 ## Deployment
 
-Do not deploy this as a portfolio flagship yet. It is now clean enough to keep public as an early ML project, but it should be deprioritized behind the RAG and NLP systems.
+This is an early ML project using synthetic data and is not intended for real financial decisions.
 
-See `DEPLOYMENT.md` for the deployment path once a stronger dataset/model is added.
+See `DEPLOYMENT.md` for the documented local run steps and prerequisites for any future hosted demo.
 
 ## Roadmap
 

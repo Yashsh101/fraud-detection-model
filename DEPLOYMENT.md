@@ -1,13 +1,13 @@
 # Deployment
 
-This repo should not be deployed as a flagship project yet. It is now structured so it can be deployed after the dataset and evaluation story are improved.
+This repository is a local demonstration using synthetic data. Do not use it for real financial decisions or deploy it as a hosted decisioning service without addressing the limitations in `MODEL_CARD.md`.
 
 ## Local API
 
 Train first:
 
 ```bash
-python scripts/train.py
+python -m scripts.train
 ```
 
 Run:
@@ -16,15 +16,15 @@ Run:
 uvicorn app.api:app --host 0.0.0.0 --port 8000
 ```
 
-## Future Render or Railway Plan
+## Future Hosted Demo Considerations
 
-1. Add a Dockerfile or platform start command.
+1. Use the included Dockerfile or a platform start command.
 2. Train the model during build only if the dataset is small and reproducible.
 3. Prefer storing a versioned model artifact externally for real projects.
-4. Set environment variables from `.env.example`.
+4. Export environment variables documented in `.env.example` before starting the process.
 5. Verify `/health` and `/predict`.
 
-## Production Checklist Before Public Demo
+## Additional Work Before Any Public Demo
 
 - Replace synthetic data with a cited public dataset.
 - Add an evaluation report committed under `docs/`.
